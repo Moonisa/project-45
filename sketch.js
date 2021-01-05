@@ -11,6 +11,7 @@ var eNote2;
 var cSound,csSound;
 var touches=[];
 var valX,valY;
+var touches=[];
 
 function preload() {
    bg= loadImage("bg.png");
@@ -48,8 +49,6 @@ console.log(border.x,border.y);
 
    cNote= createSprite(200,400,75,300); 
    cNote.shapeColor="white";
-   
-    
    dNote= createSprite(290,400,75,300); 
    dNote.shapeColor="white";
    eNote= createSprite(380,400,75,300); 
@@ -116,7 +115,7 @@ function draw(){
     text("U", 505,200, 400, 400);
     text("O", 685,200, 400, 400);
     text("P", 775,200, 400, 400);
-    if(keyWentDown("A")){
+    if(keyWentDown("A")||touches.lenght.x<1048||touches.length.y<200){
    cNote.shapeColor=(77,74,73);
 cSound.play();
         touches=[];}
